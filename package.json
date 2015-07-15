@@ -1,0 +1,26 @@
+{
+  "name": "raw.githubusercontent.com",
+  "version": "0.0.0",
+  "description": "",
+  "author": "tmtk75",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js",
+    "postinstall": "bower install"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "bower": "^1.4.1",
+    "connect-assets": "^4.8.0",
+    "cookie-parser": "^1.3.5",
+    "cookie-session": "^1.2.0",
+    "express": "^4.13.1",
+    "github-flavored-markdown": "^1.0.1",
+    "jade": "^1.11.0",
+    "jquery-xhr": "^2.1.3",
+    "method-override": "^2.3.3",
+    "morgan": "^1.6.1",
+    "passport": "^0.2.2",
+    "passport-github": "^0.1.5"
+  }
+}

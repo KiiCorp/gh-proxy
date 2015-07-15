@@ -1,0 +1,23 @@
+{
+  "name": "raw.githubusercontent.com",
+  "version": "0.0.0",
+  "authors": [
+    "tmtk75"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "octicons": "~2.3.0",
+    "primer-css": "~2.3.0"
+  }
+}

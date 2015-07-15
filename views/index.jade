@@ -1,0 +1,36 @@
+doctype html
+head
+  meta(charset="UTF-8")
+  link(rel="stylesheet", href="/bower_components/primer-css/css/primer.css")
+  link(rel="stylesheet", href="/bower_components/octicons/octicons/octicons.css")
+body
+  div.container
+    if user
+      div(style="margin-top:1rem")
+        p
+          | You are #{user.github.profile.username}, hello!
+        div
+          h4 How to use
+          div(style="margin-bottom:1rem")
+            | You can paste this to embed.
+          pre
+            | &lt;iframe src="#{baseurl}/github.com/KiiPlatform/raw-gh/master/README.md">
+            | &lt;/iframe>
+        div
+          h4 Logout & revoke
+          p
+            | You can logout here <a href="/logout">/logout</a>,<br>
+            | and revoke your authorization here, <a target="github.com" href="https://github.com/settings/applications">https://github.com/settings/applications</a>
+        div
+          h4 Examples
+          p
+            | <a href="/github.com/KiiPlatform/raw-gh/master/README.md">/github.com/KiiPlatform/raw-gh/master/README.md</a>
+    else
+      div.flash.flash-warn
+        | You're not authorized to see.
+        | Please authorize from here, <a target="/auth/github" href="/auth/github">/auth/github</a>
+        | <br>and reload again.
+    div
+      hr
+      div
+        | Served by <a href="#{baseurl}">#{baseurl}</a>
