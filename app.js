@@ -127,20 +127,12 @@ app.get('/github.com/*', function(req, res) {
        .send({ responseText: err.responseText, status: err.status, url: url, })
   })
   .done(function(resbody, stat, ajax) {
-    var page = '' +
-               '<head>' +
-               '<link  type="text/css"  href="/github-markdown.css" rel="stylesheet"/>' +
-               '</head>' +
-               '<body>' +
-               '  <main class="markdown-body">' +
-               ghm.parse(resbody) +
-               '  </main>' +
-               '  <div>' +
-               '    <hr>' +
-               '    <span>Served by <a href="' + BASEURL + '">' + BASEURL + '</a></span>' +
-               '  </div>' +
-               '</body>'
-    res.send(page);
+    var params = {
+      body: ghm.parse(resbody),
+      url: url,
+      baseurl: BASEURL,
+    }
+    res.render("body", params);
   })
 });
 

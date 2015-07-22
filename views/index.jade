@@ -40,6 +40,8 @@ body
         | You're not authorized to see.
         | Please authorize from here, <a target="/auth/github" href="/auth/github">/auth/github</a>
         | <br>and reload again.
+      p.flash.flash-warn
+        | <span class="octicon octicon-alert"></span> This app retrieves resources from github.com with your API token.
     div
       hr
       div
