@@ -1,6 +1,6 @@
-variable "app_name" {}
+variable "app_name" { default = "gh-proxy" }
 
-resource "heroku_app" "foobar" {
+resource "heroku_app" "gh-proxy" {
     name   = "${var.app_name}"
     region = "us"
 
