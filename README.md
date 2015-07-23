@@ -1,6 +1,6 @@
 README
 
-Hello, I'm raw-gh!
+Hello, I'm gh-proxy!
 
 ----
 

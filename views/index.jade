@@ -4,7 +4,7 @@ head
   link(rel="stylesheet", href="/bower_components/primer-css/css/primer.css")
   link(rel="stylesheet", href="/bower_components/octicons/octicons/octicons.css")
 body
-  - theone = "https://raw.githubusercontent.com/KiiPlatform/raw-gh/master/README.md"
+  - theone = "https://raw.githubusercontent.com/KiiPlatform/gh-proxy/master/README.md"
   div.container
     if user
       div(style="margin-top:1rem")
@@ -12,29 +12,31 @@ body
           | You are #{user.github.profile.username}, hello!
         div
           h3 How to use
-          p
-            | You can paste this to embed.
-          pre
-            | &lt;iframe src="#{baseurl}/github.com/KiiPlatform/raw-gh/master/README.md">&lt;/iframe>
-          p
-            | This will retrieve from <a target="example" href=#{theone}>#{theone}</a>.
-            | <br>General URL to embed is like
-          pre
-            | #{baseurl}/github.com/${path}
+          div.flash
+            p
+              | You can paste this to embed.
+              pre
+                | &lt;iframe src="#{baseurl}/github.com/KiiPlatform/gh-proxy/master/README.md">&lt;/iframe>
+            p
+              | This will retrieve from <a target="example" href=#{theone}>#{theone}</a>.
+              | <br>General URL to embed is like
+              pre
+                | #{baseurl}/github.com/${path}
         div
           h3 Logout & revoke
-          p
-            | You can logout here <a href="/logout">/logout</a>,<br>
-            | and revoke your authorization here, <a target="github.com" href="https://github.com/settings/applications">https://github.com/settings/applications</a>
-          p
-            | Logout removes <a href="https://github.com/blog/1509-personal-api-tokens">your personal API token</a> from the session in server
-            | Revoke revokes this webapp, which the name is <strong>raw.githubusercontent.com</strong>.
-            | You can authorize again anytime.
+          div.flash.flash-warn
+            p
+              | You can logout here <a href="/logout">/logout</a>,<br>
+              | and revoke your authorization here, <a target="github.com" href="https://github.com/settings/applications">https://github.com/settings/applications</a>
+            p
+              | Logout removes <a href="https://github.com/blog/1509-personal-api-tokens">your personal API token</a> from the session in server
+              | Revoke revokes this webapp, which the name is <strong>raw.githubusercontent.com</strong>.
+              | You can authorize again anytime.
         div
           h3 Examples
           p
             | Click to show
-            | <a href="/github.com/KiiPlatform/raw-gh/master/README.md">/github.com/KiiPlatform/raw-gh/master/README.md</a>
+            | <a href="/github.com/KiiPlatform/gh-proxy/master/README.md">/github.com/KiiPlatform/gh-proxy/master/README.md</a>
     else
       p.flash.flash-warn
         | You're not authorized to see.
